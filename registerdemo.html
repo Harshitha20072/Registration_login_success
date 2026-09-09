@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+ <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #cccdf7;
+        margin: 0; padding: 0; 
+        } 
+    form {
+        width: 400px; 
+        margin: 80px auto; 
+        padding: 30px; 
+        background-color: rgb(254, 213, 231); 
+        border: 1px solid #ddd; 
+        border-radius: 15px; 
+        } 
+    h1 {
+        text-align: center; 
+        color: #363636; 
+        font-size: 28px; 
+        margin-bottom: 30px; 
+        } 
+    label {
+        display: block; 
+        margin-bottom: 8px; 
+        color: #8b3434; 
+        font-weight: bold; 
+        } 
+    input { 
+        width: 100%; 
+        padding: 12px; 
+        margin-bottom: 20px; 
+        box-sizing: border-box; 
+        border: 1px solid #bbb; 
+        border-radius: 7px; 
+        font-size: 14px; 
+        background-color: white;
+        } 
+    input:focus {
+        border-color: #8b3434; 
+        outline: none;
+        box-shadow: 0 0 5px rgba(139, 52, 52, 0.3); 
+        } 
+    button {
+        display: block; 
+        margin: 10px auto 0; 
+        padding: 12px 35px; 
+        background-color: #000000; 
+        color: white; 
+        border: none; 
+        border-radius: 7px; 
+        font-size: 16px; 
+        font-weight: bold;
+        cursor: pointer; 
+        } 
+    button:hover {
+        background-color: #6f2929;
+        } 
+    button:active { 
+        transform: scale(0.97); 
+        }
+</style>
+</head>
+<body>    
+    <h1>Employee Registration form</h1>                             
+    <form id="registrationform" action="login.html" method="GET">
+         <label>Full name:</label>
+        <input id="fullname" type="text" placeholder="Enter your fullname" name="fullname">
+        <br><br>
+        <label>Username/email:</label>
+        <input id="username" type="text" type="email" placeholder="Enter your username/email id" name="username">
+        <br><br>
+        <label>Password:</label>
+        <input  id="password" type="password" placeholder="Enter your password" name="password">
+        <br><br>
+        <Button type="submit" value="register">Register</Button>
+        <br></br>
+    </form>
+</body>
+</html>

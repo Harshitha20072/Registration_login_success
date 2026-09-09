@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style> 
+    /* Background of the whole page */ 
+       body {
+        font-family: Arial, sans-serif;
+        background-color: #cccdf7; 
+        margin: 0; 
+        padding: 0; 
+        }
+    /* Login form */ 
+       form { 
+        width: 400px; 
+        margin: 80px auto; 
+        padding: 30px; 
+        background-color: rgb(254, 213, 231); 
+        border: 1px solid #ddd; 
+        border-radius: 15px; 
+        } 
+    /* Message */ 
+       #message { 
+        text-align: center; 
+        font-weight: bold; 
+        color: #8b3434; 
+        margin-bottom: 20px; 
+        } 
+    /* Heading */ 
+      h1 { 
+        text-align: center; 
+        color: #363636; 
+        font-size: 28px; 
+        margin-bottom: 30px; 
+        } 
+    /* Labels */ 
+      label { 
+        display: block; 
+        margin-bottom: 8px; 
+        color: #8b3434; 
+        font-weight: bold; 
+        } 
+    /* Input boxes */ 
+       input {
+        width: 100%; 
+        padding: 12px; 
+        margin-bottom: 20px; 
+        box-sizing: border-box; 
+        border: 1px solid #bbb; 
+        border-radius: 7px; 
+        font-size: 14px; 
+        background-color: white; 
+        }
+    /* Input when selected */ 
+      input:focus {
+        border-color: #8b3434; 
+        outline: none; 
+        box-shadow: 0 0 5px rgba(139, 52, 52, 0.3); 
+        } 
+    /* Login button */ 
+      button { 
+        display: block; 
+        margin: 10px auto 0; 
+        padding: 12px 35px; 
+        background-color: #000000; 
+        color: white; 
+        border: none; 
+        border-radius: 7px; 
+        font-size: 16px; 
+        font-weight: bold; 
+        cursor: pointer; 
+        }
+    /* Button hover */ 
+      button:hover {
+        background-color: #6f2929; 
+        } 
+    /* Button click */ 
+      button:active {
+        transform: scale(0.97); 
+        } 
+    </style>
+</head>
+<body>
+    <form id="loginform" >
+    <p id="message"></p>
+    <label>Username/email:</label>
+    <input id="username" type="text" type="email" placeholder="Enter your username/email id" name="Username" >
+    <br><br>
+    <label>Password:</label>
+    <input id="password" type="password" placeholder="Enter your password">
+    <br><br>
+    <Button type="submit" value="login">login</Button>
+    <br></br>
+    </form>
+    <script>
+            let params=new URLSearchParams(window.location.search)
+            let registeredusername=params.get("username")
+            let registeredpassword=params.get("password")
+            document.getElementById("loginform")
+            .addEventListener("submit",
+                function(event){
+                    event.preventDefault()
+                    let username=document.getElementById("username").value 
+                    let password=document.getElementById("password").value
+                    if(username===registeredusername && password===registeredpassword)
+                {
+                    document.getElementById("message").innerHTML=username+"Logged in successfully!"
+                }
+                else
+                {
+                    document.getElementById("message").innerHTML=username+"Login in failed!"
+                }
+                }
+            )
+        
+    </script>
+</body>
+</html>
