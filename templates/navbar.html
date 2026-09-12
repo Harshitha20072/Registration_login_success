@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #222;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            margin-right: auto;
+        }
+
+        /* Navigation links */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            color: #00bcd4;
+        }
+
+        /* login button */
+        .login.btn {
+            border: 1px solid#00bcd4;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .login-btn:hover {
+            background-color: #00bcd4;
+            color: white !important;
+        }
+
+        /* Register button */
+        .register-btn {
+            background-color: #00bcd4;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .register-btn:hover {
+            background-color: #0097a7;
+            color: white !important;
+        }
+
+        /* content */
+        .content {
+            padding: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Management System</title>
+    <style>
+        /* Your existing CSS code here */
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            Employee Management System
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/employees">Employee</a></li>
+            <li><a href="/add-employee">AddEmployee</a></li>
+            <li><a href="/search">Search</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+        </ul>
+    </nav>
+    <div style="padding: 40px; text-align: center; font-family: sans-serif;">
+        {% if page == 'home' %}
+            <h2>Welcome to the Home Dashboard</h2>
+            <p>This is the main overview of your Employee Management System.</p>
+
+        {% elif page == 'employees' %}
+            <h2>Employee List</h2>
+            <p>View, edit, and manage all active employee records here.</p>
+
+        {% elif page == 'add' %}
+            <h2>Add New Employee</h2>
+            <p>Enter details to register a new employee into the system.</p>
+
+        {% elif page == 'search' %}
+            <h2>Search Employees</h2>
+            <p>Find specific employees quickly by ID, Name, or Department.</p>
+
+        {% else %}
+            <h2>Welcome to Employee Management System</h2>
+            <p>Select an option from the navigation menu above.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
